@@ -22,7 +22,17 @@ cursor = connection.cursor()
 # cursor.execute('SELECT * FROM "Album" WHERE "ArtistId" = %s', [51])
 
 # Query 6 - select all tracks where the composer is "Queen" from the "Track"
-cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["Queen"])
+# cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["Queen"])
+
+# TEST queries
+# Query 7 - select only "Jack Johnson" from the "Artist" table
+# cursor.execute('SELECT * FROM "Artist" WHERE "Name" = %s', ["Jack Johnson"])
+
+# Query 8 - select all tracks where the composer is "Jack Johnson"
+# cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["Jack Johnson"])
+
+# Query - Select an artist who does not appear in the database
+cursor.execute('SELECT * FROM "Artist" WHERE "Name" = %s', ["Puddle Of Mud"])
 
 # fetch the results (multiple)
 results = cursor.fetchall()
