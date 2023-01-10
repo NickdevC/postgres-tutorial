@@ -29,7 +29,8 @@ cursor = connection.cursor()
 # cursor.execute('SELECT * FROM "Artist" WHERE "Name" = %s', ["Jack Johnson"])
 
 # Query 8 - select all tracks where the composer is "Jack Johnson"
-# cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["Jack Johnson"])
+# cursor.execute('SELECT * FROM "Track" WHERE "Composer" =
+# %s', ["Jack Johnson"])
 
 # Query - Select an artist who does not appear in the database
 cursor.execute('SELECT * FROM "Artist" WHERE "Name" = %s', ["Puddle Of Mud"])
